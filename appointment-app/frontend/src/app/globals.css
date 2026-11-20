@@ -1,0 +1,74 @@
+:root{
+  --bg:#f4f7f6; --surface:#ffffff; --ink:#10302e; --muted:#5b7573; --line:#d7e3e0;
+  --brand:#0b6b63; --brand-dark:#084f49; --soft:#dff1ee; --danger:#b3261e; --ok:#1b7a43;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body),system-ui,sans-serif;line-height:1.55}
+h1,h2,h3{font-family:var(--font-display),system-ui,sans-serif;line-height:1.15;margin:0 0 .5rem}
+h1{font-size:clamp(1.9rem,4vw,2.9rem);letter-spacing:-.02em}
+h2{font-size:1.1rem;margin-top:1.6rem}
+a{color:var(--brand)}
+.wrap{max-width:1080px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+.muted{color:var(--muted)} .small{font-size:.85rem}
+.err{color:var(--danger)} .ok{color:var(--ok)}
+
+.nav{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.25rem;max-width:1080px;margin:0 auto}
+.nav nav{display:flex;gap:1rem;align-items:center}
+.nav a{text-decoration:none;color:var(--ink)}
+.nav a.btn{color:#fff}
+.brand{font-family:var(--font-display);font-weight:800;font-size:1.3rem}
+.brand span{color:var(--brand)}
+button.link{background:none;border:0;color:var(--ink);cursor:pointer;font:inherit}
+
+input,select{font:inherit;padding:.65rem .8rem;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:100%}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:3px solid #7cc4bb;outline-offset:2px}
+.btn{background:var(--brand);color:#fff;border:0;padding:.7rem 1.1rem;border-radius:8px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;white-space:nowrap}
+.btn:hover{background:var(--brand-dark)} .btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.small{padding:.4rem .8rem;font-size:.9rem}
+.btn.ghost{background:transparent;color:var(--danger);border:1px solid var(--danger)}
+a.btn{color:#fff}
+
+.hero{padding:1.5rem 0 2rem}
+.hero>p{max-width:55ch;color:var(--muted)}
+.aibox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem;max-width:720px;margin-top:1.2rem}
+.aibox label{display:block;font-weight:600;margin-bottom:.5rem}
+.row{display:flex;gap:.6rem}
+.aires{margin-top:.8rem;background:var(--soft);padding:.7rem .9rem;border-radius:8px}
+.aires.danger{background:#fde8e6;color:var(--danger)}
+
+.filters{display:grid;grid-template-columns:2fr 1fr;gap:.7rem;margin-bottom:1.2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.doc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem;display:flex;flex-direction:column}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-family:var(--font-display);font-weight:700;margin-bottom:.6rem}
+.spec{color:var(--muted);margin:.1rem 0 .6rem}
+.sched{list-style:none;padding:0;margin:0 0 1rem;font-size:.9rem}
+.sched li{padding:.15rem 0;border-bottom:1px dashed var(--line)}
+.sched b{display:inline-block;width:2.6rem}
+.foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+.fee{font-weight:700;font-size:1.1rem}
+
+.booking{display:grid;grid-template-columns:1fr 1.4fr;gap:2.5rem}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:.5rem}
+.slot{padding:.55rem;border-radius:8px;border:1px solid var(--brand);background:var(--surface);color:var(--brand);font:inherit;cursor:pointer}
+.slot:hover:not(:disabled){background:var(--soft)}
+.slot.on{background:var(--brand);color:#fff}
+.slot:disabled{border-color:var(--line);color:#8aa09d;background:#eef3f2;text-decoration:line-through;cursor:not-allowed}
+.confirm{margin-top:1.2rem;padding:1rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;display:grid;gap:.7rem}
+
+.auth{max-width:380px;margin:2rem auto;display:grid;gap:.9rem}
+.auth label{display:grid;gap:.3rem;font-weight:600}
+
+.list{list-style:none;padding:0;display:grid;gap:.8rem}
+.list li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem;display:flex;justify-content:space-between;gap:1rem}
+.list li.cancelled{opacity:.6}
+.list p{margin:.15rem 0}
+.right{display:flex;flex-direction:column;align-items:flex-end;gap:.6rem}
+.badge{padding:.15rem .6rem;border-radius:99px;font-size:.8rem;background:var(--soft)}
+.badge.cancelled{background:#f3dcda;color:var(--danger)}
+
+@media (max-width:760px){
+  .booking{grid-template-columns:1fr}
+  .filters{grid-template-columns:1fr}
+  .row{flex-direction:column}
+}
